@@ -1,20 +1,15 @@
 package com.example.monikagarg.finalproject;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 /**
  * Created by monikagarg on 6/26/2016.
@@ -30,13 +25,14 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
 
         public MyViewHolder(final View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.textView);
-            time = (TextView) view.findViewById(R.id.textView6);
-            venue = (TextView) view.findViewById(R.id.textView9);
-            description = (TextView) view.findViewById(R.id.textView5);
-            attendees = (TextView) view.findViewById(R.id.textView10);
-            image = (ImageView) view.findViewById(R.id.imageView2);
-            image1 = (ImageView) view.findViewById(R.id.imageView3);
+
+            title = (TextView) view.findViewById(R.id.DisplayTitle);
+            time = (TextView) view.findViewById(R.id.DisplayTime);
+            venue = (TextView) view.findViewById(R.id.displayVenue);
+            description = (TextView) view.findViewById(R.id.displayDiscription);
+            attendees = (TextView) view.findViewById(R.id.DisplayAttendees);
+            image = (ImageView) view.findViewById(R.id.islabel);
+            image1 = (ImageView) view.findViewById(R.id.isfav);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -46,17 +42,12 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
                             .setMessage("Are you sure you want to delete this entry?")
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
-
-                                    }
-
-
-                                    // continue with delete
-
+                                }
+                                // continue with delete
                             })
                             .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.cancel();
-
                                 }
                             })
                             .setIcon(android.R.drawable.ic_dialog_alert)
@@ -68,7 +59,6 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
     public EventsAdapter(List<Event> eventsList, Context context) {
         this.eventsList = eventsList;
         mContext = context;
-
     }
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -96,6 +86,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
                 else
                 {
                     holder.image1.setImageDrawable(mContext.getResources().getDrawable(R.drawable.fav_a));
+                    check=true;
                 }
             }
         });

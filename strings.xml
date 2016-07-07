@@ -17,5 +17,6 @@
     <string name="title_activity_newevent">NEWmenu</string>
     <string name="title_activity_newtimetableentry">NEWtimetableentry</string>
     <string name="title_activity_newmenuentry">NEWmenuentry</string>
+    <string name="title_activity_on_click__cardview">OnClick_Cardview</string>
 </resources>
 

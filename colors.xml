@@ -12,5 +12,20 @@
     <color name="light_pink">#f8bbd0</color>
     <color name="primary_color">#03a9f4</color>
     <color name="dark_primary_color">#0288d1</color>
+    <color name="lightwesteria">#BE90D4</color>
+    <color name="green50">#e0f2f1</color>
+    <color name="green100">#b2dfdb</color>
+    <color name="green200">#80cbc4</color>
+    <color name="green300">#4db6ac</color>
+    <color name="green400">#26a69a</color>
+    <color name="green500">#009688</color>
+    <color name="green600">#00897b</color>
+    <color name="green700">#00796b</color>
+    <color name="green800">#00695c</color>
+    <color name="green900">#004d40</color>
+
+
+
+
 
 </resources>

@@ -86,7 +86,7 @@ public class LandingPageActivity extends AppCompatActivity implements GestureDet
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-       /* if (id == R.id.action1) {
+        if (id == R.id.action1) {
             AlertDialog.Builder a= new AlertDialog.Builder(this);
             a.setMessage("Search an item");
             a.show();
@@ -105,7 +105,7 @@ public class LandingPageActivity extends AppCompatActivity implements GestureDet
             a.setMessage("snip out");
             a.show();
             return true;
-        }*/
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -160,15 +160,15 @@ public class LandingPageActivity extends AppCompatActivity implements GestureDet
         startActivity(intent3);
     }
 
-    public void Addpic(View v){
+    /*public void Addpic(View v){
         Intent intent = new Intent();
 // Show only images, no videos or anything else
-        intent.setType("image/*");
+        intent.setType("image*//*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
 // Always show the chooser (if there are multiple options available)
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
-    }
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    }*/
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
@@ -185,7 +185,7 @@ public class LandingPageActivity extends AppCompatActivity implements GestureDet
                 e.printStackTrace();
             }
         }
-    }
+    }*/
 
     public void Camera(View v){
         Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);

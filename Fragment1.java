@@ -27,9 +27,8 @@ public class Fragment1 extends Fragment{
     List<Event>eventList = new ArrayList<>();
     private EventsAdapter mAdapter;
     private LinearLayoutManager linearLayoutManager;
+    Eventdao eventdao= new Eventdao();
 
-    EditText title;
-    Button bn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,12 +41,16 @@ public class Fragment1 extends Fragment{
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
 
-        prepareEventData();
+     //   eventdao.addRecords(getContext(), );
+        eventList=eventdao.retrieveRecords(getContext());
+
+       // prepareEventData();
         return rootView;
     }
 
-    private void prepareEventData() {
+    /*private void prepareEventData() {
 
         Event event = new Event("MEETING","11.30","LHC","With group 12","Group13",R.drawable.label_a);
         eventList.add(event);
@@ -70,7 +73,7 @@ public class Fragment1 extends Fragment{
 
 
         mAdapter.notifyDataSetChanged();
-    }
+    }*/
 }
 
 

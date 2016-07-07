@@ -15,7 +15,11 @@ public class Logindao {
         boolean loginSuccessful = false;
         DatabaseHandler databaseHandler = new DatabaseHandler(context);
         db = databaseHandler.getReadableDatabase();
-        String query = " select " + UtilConstants.USER_NAME + " from " + UtilConstants.LOGIN_TABLE_NAME + " where " + UtilConstants.USER_NAME + " = ? and " + UtilConstants.PASSWORD + " = ? ";
+        String query = " select " + UtilConstants.USER_NAME +
+                " from " + UtilConstants.LOGIN_TABLE_NAME +
+                " where " + UtilConstants.USER_NAME +
+                " = ? and " + UtilConstants.PASSWORD + " = ? ";
+
         Cursor cursor = db.rawQuery(query, new String[]{username, password});
         if (cursor.moveToFirst()) {
             do {
@@ -30,7 +34,9 @@ public class Logindao {
         DatabaseHandler databaseHandler = new DatabaseHandler(context);
         db = databaseHandler.getWritableDatabase();
         db.beginTransaction();
-        String insertStatement = " insert or replace into " + UtilConstants.LOGIN_TABLE_NAME + "( " + UtilConstants.USER_NAME + " , " + UtilConstants.NAME + " , " + UtilConstants.PASSWORD + ")" + " values(?,?,?) ";
+        String insertStatement = " insert or replace into " + UtilConstants.LOGIN_TABLE_NAME + "( "
+                + UtilConstants.USER_NAME + " , " + UtilConstants.NAME + " , "
+                + UtilConstants.PASSWORD + ")" + " values(?,?,?) ";
         db.execSQL(insertStatement, new String[]{"sj", "sakshi", "1234"});
         db.setTransactionSuccessful();
         db.endTransaction();

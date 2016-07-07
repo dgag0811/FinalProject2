@@ -8,6 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/wall_d"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.monikagarg.finalproject.NEWevent"
@@ -23,14 +24,14 @@
         android:inputType="textMultiLine"
         android:layout_marginLeft="100dp"
         android:ems="10"
-        android:id="@+id/editText2" />
+        android:id="@+id/enterTitle" />
 
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Title"
-        android:id="@+id/textView11"
+        android:id="@+id/formTitle"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
     </RelativeLayout>
@@ -43,7 +44,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Description"
-        android:id="@+id/textView13"
+        android:id="@+id/formDescription"
         />
     <EditText
         android:layout_width="match_parent"
@@ -51,7 +52,7 @@
         android:inputType="textMultiLine"
         android:layout_marginLeft="100dp"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/enterdescription"
         android:layout_gravity="center_horizontal" />
 </RelativeLayout>
 
@@ -63,13 +64,13 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Venue"
-        android:id="@+id/textView14"
+        android:id="@+id/formVenue"
         android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:id="@+id/editText7"
+        android:id="@+id/enterVenue"
         android:layout_gravity="center_horizontal" />
     </RelativeLayout>
 
@@ -81,7 +82,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Time"
-        android:id="@+id/textView12"
+        android:id="@+id/formTime"
         android:layout_centerVertical="true" />
     <EditText
         android:layout_width="match_parent"
@@ -89,7 +90,7 @@
         android:layout_marginLeft="100dp"
         android:inputType="time"
         android:ems="10"
-        android:id="@+id/editText8"
+        android:id="@+id/enterTime"
         android:layout_gravity="center_horizontal" />
     </RelativeLayout>
 
@@ -101,34 +102,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Attendees"
-        android:id="@+id/textView15"
+        android:id="@+id/formAttendees"
         android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:id="@+id/editText9"
+        android:id="@+id/enterAttendees"
         android:layout_gravity="center_horizontal" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Image"
-        android:id="@+id/textView16"
-        android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/imageView4"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/light_pink"/>
-
-
-
-<RelativeLayout
+    <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <TextView
@@ -136,14 +121,14 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Date"
-        android:id="@+id/textView17" />
+        android:id="@+id/formDate" />
     <EditText
         android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText10" />
+        android:id="@+id/enterDAte" />
     </RelativeLayout>
 
     <Button
@@ -151,7 +136,7 @@
         android:layout_height="31dp"
         android:layout_marginTop="80dp"
         android:text="Add"
-        android:id="@+id/button"
+        android:id="@+id/addevent"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.15" />
 

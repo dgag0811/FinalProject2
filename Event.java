@@ -6,8 +6,8 @@ import java.sql.Time;
  * Created by monikagarg on 6/26/2016.
  */
 
-    public class Event {
-        private String date,title,time,venue,description,attendees;
+public class Event {
+    private String date,title,time,venue,description,attendees;
     public Event() {
     }
     public Event(String date, String title, String description,String venue, String attendees, String time) {
